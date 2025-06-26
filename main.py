@@ -9,7 +9,10 @@ app = FastAPI(title="Healthcare Translator API")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=[
+        "http://localhost:3000",  # Keep for local development
+        "https://healthtranslate.vercel.app",  # Add your Vercel frontend
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
