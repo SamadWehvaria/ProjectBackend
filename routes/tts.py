@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 
 class TTSRequest(BaseModel):
     text: str = Field(..., min_length=1, max_length=5000)
-    lang: str = Field(..., regex="^(en|es|fr|ar|ur|zh)$")
+    lang: str = Field(..., pattern="^(en|es|fr|ar|ur|zh)$")
 
 class TTSResponse(BaseModel):
     text: str
