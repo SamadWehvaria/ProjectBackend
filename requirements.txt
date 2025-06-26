@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+openai
+httpx
+python-dotenv
+python-jose[cryptography]
+passlib[bcrypt]
+requests
+pydantic[email]
+python-multipart
+elevenlabs>=2.5.0
